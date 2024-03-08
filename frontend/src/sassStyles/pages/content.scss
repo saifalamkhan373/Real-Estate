@@ -1,0 +1,406 @@
+@import '../abstracts/variables';
+@import '../abstracts/global';
+@import '../abstracts/mixins';
+
+.content_block1{
+    width: 100%;
+    height: auto;
+    padding: 150px 0 190px 0;
+    @include center-content-column;
+    background-image: $dominantbackground;
+    @include respond2(gridcontainer){
+        padding: 120px 0;
+    }
+     @include respond5(contentBreak){
+            padding: 80px 0;
+        }
+
+    &_featuring {
+            width: 100%;
+            margin-bottom: 30px;
+            @include center-content;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            color: rgb(179, 138, 138);  
+      }
+
+    &_wrapper {
+        max-width: 1000px;
+        @include center-content-row;
+        margin: 0 20px;
+        padding: 10px;
+        @include respond5(contentBreak){
+            @include center-content-column;
+        }
+
+    .name {
+           position: absolute;
+           @include center-content;
+           top:0;
+           left:0;
+           bottom:0;
+           right: 0;
+           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+           font-size: 1rem;
+           letter-spacing: 2px;
+           color: rgb(207, 198, 219);
+           background-image: linear-gradient(to bottom, rgb(61, 0, 0, .1),  rgb(85, 0, 0, .3));
+
+           & span {
+               padding: 20px;
+               @include center-content;
+               background-color: rgb(61, 0, 0, .8);
+           }
+       }
+
+       &_imgLeft, &_imgRight {
+        position: relative;
+        margin: 10px;
+        width: 50%;
+        height: auto;
+        line-height: 0;
+        border-top: 1px solid rgb(184, 127, 127);
+          border-left: 1px solid rgb(134, 81, 81);
+          border-right: 1px solid rgb(134, 81, 81);
+          border-bottom: 1px solid rgb(94, 49, 49);
+
+        & img {
+            box-shadow: 0px 2px 41px rgb(20, 0, 0);
+            }
+
+         @include respond5(contentBreak){
+           width: 100%;
+           margin-bottom: 40px;
+        }
+      }
+    }
+
+.viewAllProps {
+         width: 220px;
+         height: 50px;
+         margin-top: 50px;
+         border: 1px solid rgb(122, 86, 86);
+         @include center-content;
+         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+         font-size: 1rem;
+         letter-spacing: 2px;
+         color: rgb(207, 198, 219);
+
+          @include respond5(contentBreak){
+           margin-bottom: 40px;
+        }
+      }
+}
+
+
+.content_sold {
+    max-height: 740px;
+    width: 100%;
+    padding: 100px 0;
+    background-image: linear-gradient(to bottom, rgb(241, 241, 241),rgb(207, 207, 207));
+    transition: all 1s ease-in-out;
+    @include respond11(fiveteenhundred){
+        max-height: 1350px;
+    }
+    @include respond12(thousand){
+        max-height: 1950px;
+    }
+}
+
+.showMore {
+    max-height: 1750px;
+     @include respond11(fiveteenhundred){
+        max-height: 1950px;
+    }
+     @include respond12(thousand){
+        max-height: 3250px;
+    }
+}
+
+.content_block2 {
+    position: relative;
+    height: 700px;
+    background-color: rgb(59, 0, 0);
+     @include center-content-column;
+    padding-top: 50px;
+     @include respond8(removeaward) {
+        height: 1100px;
+        padding-top: 0;
+      }
+
+
+    &_visit {
+        position: absolute;
+        bottom: 180px;
+        width: 260px;
+        padding: 20px 30px;
+        border: 1px solid rgb(187, 187, 187);
+        cursor: pointer;
+        @include center-content-column;
+        color: rgb(190, 190, 190);
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+        @include respond11(fiveteenhundred){
+            bottom: 100px;
+        }
+    }
+}
+
+.content_block3  {
+    background-image: url('../../assets/images/bank.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    @include center-content-column;
+    height: 700px;
+
+    &_wrapper {
+        max-width: 650px;
+        height: auto;
+        margin-bottom: 50px;
+        margin-left: 25px;
+        margin-right: 25px;
+        @include center-content-column;
+
+        & .finance {
+            width: 100%;
+            @include center-content-column;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 4rem;
+            letter-spacing: 10px;
+            color:rgb(207, 198, 219);
+            margin-bottom: 30px;
+            border-bottom: 3px solid  rgb(207, 198, 219);
+             @include respond7(headername){
+             font-size: 3rem;
+         }
+        }
+
+        & .elliesTeam {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            color:rgb(217, 211, 226);
+            margin-bottom: 40px;
+
+              @include respond8(removeaward){
+             text-align: center;
+         }
+        }
+
+        & .financialService {
+            width: 200px;
+            height: 50px;
+            background-color: rgb(66, 0, 0, .5);
+            border: 1px solid  rgb(207, 198, 219);
+            @include center-content;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            color:rgb(217, 211, 226);
+            cursor: pointer;
+            transition: .2s ease-in-out;
+
+            &:hover {
+                 letter-spacing: 5px;
+            }
+        }
+    }
+}
+
+.content_block4  {
+    height: 700px;
+    background-color: rgb(231, 231, 231);
+}
+
+.block5 {
+    @include center-content-column;
+     background-image: url('../../assets/images/balance.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 700px;
+    background-color: $dominantbackground;
+
+    &_content {
+        max-width: 800px;
+        margin: 0 20px;
+        height: auto;
+        @include center-content-column;
+
+        & .balancingAct {
+        width: 100%;
+        @include center-content;
+        letter-spacing: 5px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        padding: 10px 0;
+        font-size: 2rem;
+        color: rgb(233, 233, 233);
+        border-bottom: 3px solid  rgb(233, 233, 233);
+        margin-bottom: 20px;
+         @include respond3(smallest){
+            font-size: 1.7rem;
+            letter-spacing: 2px;
+        }
+
+        &_text {
+             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+             font-size: 1rem;
+             color:rgb(233, 233, 233);
+        }
+    }
+
+    & .services {
+            width: 200px;
+            height: 50px;
+            margin-top: 30px;
+            background-color: rgba(63, 63, 63, 0.5);
+            border: 1px solid  rgb(207, 198, 219);
+            @include center-content;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            color:rgb(217, 211, 226);
+            cursor: pointer;
+            transition: .2s ease-in-out;
+
+            &:hover {
+                 letter-spacing: 5px;
+            }
+        }
+    }
+}
+
+.content_block6  {
+    height: 700px;
+    background-color:rgb(66, 0, 0);
+}
+
+.content_block7 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 60px 0;
+    background-image: url('../../assets/images/frenchcountryside.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include respond2(gridcontainer){
+            height: auto;
+         }
+
+    .wrapper {
+    width: 1000px;
+    @include center-content-column;
+    color: rgb(217, 211, 226);
+    padding: 60px 0;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     @include respond2(gridcontainer){
+            width: 90%;
+         }
+    @include respond9(sidebarDelete) {
+        padding: 0 0 60px 0;
+          }
+
+    &_header {
+       width: 100%;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       flex-direction: row;
+       border-bottom: 2px solid rgb(217, 211, 226);
+       &_fleurdelis {
+        display: none;
+       }
+       @include respond9(sidebarDelete) {
+            @include center-content-column;
+            &_fleurdelis {
+                display: flex;
+                width: 40px;
+                margin-bottom: 40px;
+            }
+       }
+       
+
+       .fleurdelis {
+            width: 40px;
+            @include respond9(sidebarDelete) {
+            display: none;
+        }
+        }
+
+        
+    }
+
+    &_title {
+        @include center-content-column;
+    }
+
+    &_subHeader {
+        font-size: 2rem;
+        flex-direction: row;
+    }
+
+    &_subTitle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 20px;
+        width: 100%;
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+        word-spacing: 5px;
+        @include respond3(smallest){
+              font-size: 1rem;
+              letter-spacing: 1px;
+               word-spacing: 3px;
+        }
+    }
+
+    &_text {
+        width: 100%;
+        padding: 20px 0;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: row;
+        line-height: 1.6;
+        @include respond5(contentBreak){
+            flex-direction: column;
+         }
+
+        &_columnLeft {
+            width: 50%;
+            margin-right: 35px;
+            display: flex;
+            align-items: flex-start;
+            @include respond5(contentBreak){
+            width: 100%;
+            margin-right: 0px;
+         }
+         b {
+                text-decoration: underline;
+            }
+        }
+
+        &_columnRight {
+            width: 50%;
+            margin-right: 10px;
+             @include respond5(contentBreak){
+            width: 100%;
+            margin-right: 0px;
+         }
+         b {
+                text-decoration: underline;
+            }
+        }
+    }
+    }
+}
+
+
+
+

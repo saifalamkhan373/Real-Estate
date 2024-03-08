@@ -1,0 +1,213 @@
+//Position content
+@mixin center-content {
+  display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+@mixin center-content-column {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+}
+
+@mixin center-content-column-top {
+ display: flex;
+ align-items: center;
+ justify-content: flex-start;
+ flex-direction: column;
+}
+
+@mixin center-content-column-start {
+ display: flex;
+ align-items: flex-start;
+ justify-content: space-around;
+ flex-direction: column;
+}
+
+@mixin center-content-column-start-top {
+ display: flex;
+ align-items: flex-start;
+ justify-content: flex-start;
+ flex-direction: column;
+}
+
+@mixin center-content-row {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: row;
+}
+
+@mixin center-content-row-start {
+ display: flex;
+ align-items: center;
+ justify-content: flex-start;
+ flex-direction:row;
+}
+
+@mixin center-content-row-start-top {
+ display: flex;
+ align-items: flex-start;
+ justify-content: flex-start;
+ flex-direction:row;
+}
+
+@mixin center-content-row-top{
+ display: flex;
+ align-items: flex-start;
+ justify-content: center;
+ flex-direction:row;
+}
+
+
+@mixin spacebetween-content {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ flex-direction: row;
+}
+
+@mixin spacebetween-content-column {
+ display: flex;
+ align-items: flex-start;
+ justify-content: space-between;
+ flex-direction: column;
+}
+
+@mixin spacebetween-content-top {
+ display: flex;
+ align-items: flex-start;
+ justify-content: space-between;
+ flex-direction: row;
+}
+
+@mixin spacearound-content-top {
+ display: flex;
+ align-items: flex-start;
+ justify-content: space-around;
+ flex-direction: row;
+}
+
+//Media queries
+@mixin respond11($breakpoint) { 
+  @if $breakpoint == fiveteenhundred {    
+    @media only screen and (max-width: 1500px) {
+      @content;
+    }
+  }
+}
+
+@mixin respond14($breakpoint) { 
+  @if $breakpoint == thirteenthirty {    
+    @media only screen and (max-width: 1330px) {
+      @content;
+    }
+  }
+}
+
+@mixin respond10($breakpoint) { 
+  @if $breakpoint == thirteenhundred {    
+    @media only screen and (max-width: 1300px) {
+      @content;
+    }
+  }
+}
+
+@mixin respond1($breakpoint) { 
+  @if $breakpoint == removeSidebar {    
+    @media only screen and (max-width: 1200px) {
+      @content;
+    }
+  }
+}
+
+@mixin respond2($breakpoint) { 
+  @if $breakpoint == gridcontainer {    
+    @media only screen and (max-width: 1080px) {
+      @content;
+    }
+  }
+}
+
+@mixin respond12($breakpoint) { 
+  @if $breakpoint == thousand {    
+    @media only screen and (max-width: 1000px) {
+      @content;
+    }
+  }
+}
+
+@mixin respond($breakpoint) { 
+  @if $breakpoint == hamburgermenu {    
+    @media only screen and (max-width: 800px) {
+      @content;
+    }
+  }
+}
+
+@mixin respond5($breakpoint) { 
+  @if $breakpoint == contentBreak {    
+    @media only screen and (max-width: 750px) {
+      @content;
+    }
+  }
+}
+
+
+@mixin respond8($breakpoint) { 
+  @if $breakpoint == removeaward {    
+    @media only screen and (max-width: 700px) {
+      @content;
+    }
+  }
+}
+
+@mixin respond9($breakpoint) { 
+  @if $breakpoint == sidebarDelete {    
+    @media only screen and (max-width: 650px) {
+      @content;
+    }
+  }
+}
+
+@mixin respond3($breakpoint) { 
+  @if $breakpoint == smallest {    
+    @media only screen and (max-width: 510px) {
+      @content;
+    }
+  }
+}
+
+@mixin respond4($breakpoint) { 
+  @if $breakpoint == ellielogo {    
+    @media only screen and (max-width: 510px) {
+      @content;
+    }
+  }
+}
+
+@mixin respond6($breakpoint) { 
+  @if $breakpoint == castlesandchateaux {    
+    @media only screen and (max-width: 510px) {
+      @content;
+    }
+  }
+}
+
+@mixin respond7($breakpoint) { 
+  @if $breakpoint == headername {    
+    @media only screen and (max-width: 410px) {
+      @content;
+    }
+  }
+}
+
+@mixin respond15($breakpoint) { 
+  @if $breakpoint == minimalwidth {    
+    @media only screen and (max-width: 400px) {
+      @content;
+    }
+  }
+}

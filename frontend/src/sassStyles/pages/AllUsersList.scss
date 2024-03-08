@@ -1,0 +1,172 @@
+@import '../abstracts/variables';
+@import '../abstracts/global';
+@import '../abstracts/mixins';
+
+.dashboardContainer {
+    margin: 80px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+    height: auto;
+    margin-bottom: 120px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(177, 164, 184);
+    @include center-content-row-top;
+    gap: 20px;
+    @include respond12(thousand){
+       @include center-content-column;
+    }
+    @include respond3(smallest){
+          padding: 0;  
+        }
+
+    .usersWrapper {
+        width: 50%;
+        max-height: 1100px;
+        font-size: 1rem;
+        margin-bottom: 20px;
+        padding: 0 20px;
+        border-top: 2px solid rgb(100, 55, 55);
+        box-shadow: 0px 2px 4px rgb(26, 0, 0);
+        @include respond12(thousand){
+        width:90%;
+        }
+        @include respond7(headername){
+        width:100%;
+        }
+
+        .registeredUsers {
+            @include spacebetween-content;
+            width: 100%;
+            font-size: 1.6rem;
+            padding: 10px 0;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgb(207, 198, 219);
+        }
+
+        &_allUsers {
+        width: 100%;
+        height: 980px;
+        font-size: 1rem;
+        overflow: auto;
+        margin-bottom: 50px;
+
+        & .userInfo {
+            width: 98%;
+            height: auto;
+            margin-bottom: 30px;
+            @include center-content-column-start-top;
+            text-align: left;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgb(207, 198, 219);
+
+   
+    &_users {
+        width: 100%;
+        @include center-content-column;
+
+        & .user {
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            height: 35px;
+            border-bottom: 1px solid rgb(105, 73, 73);
+
+            & .prefix {
+                width: 50%;
+                @include respond7(headername){
+                    width: 45%;
+                }
+            }
+
+            & .names {
+                 width: 50%;
+                 font-style: italic;
+                @include respond7(headername){
+                    width: 55%;
+                }
+            }
+        }
+
+        & .deleteUserBtn {
+            width: 100%;
+            height: 40px;
+            margin-top: 20px;
+            background-image: linear-gradient(to top, rgb(61, 0, 0),  rgb(85, 0, 0));
+            color: rgb(177, 164, 184);
+            border-style: none;
+            border-top: 1px solid rgb(116, 51, 51);
+            border-bottom: 2px solid rgb(49, 0, 0);
+            font-size: 1rem;
+            font-family: Arial, Helvetica, sans-serif;
+
+            &:hover {
+                background-image: linear-gradient(to top, rgb(75, 0, 0),  rgb(121, 0, 0));
+                border-top: 1px solid rgb(165, 62, 62);
+                border-bottom: 2px solid rgb(56, 0, 0);
+            }
+          }
+       }
+     }
+  }
+
+}
+    
+.allemailsWrapper {
+        width: 50%;
+        max-height: 550px;
+        font-size: 1rem;
+        margin-bottom: 20px;
+        padding: 0 20px;
+        border-top: 2px solid rgb(100, 55, 55);
+        box-shadow: 0px 2px 4px rgb(26, 0, 0);
+        @include respond12(thousand){
+           width:90%;
+        }
+        @include respond7(headername){
+        width:100%;
+        }
+
+        .subscribers {
+            width: 100%;
+            font-size: 1.6rem;
+            @include spacebetween-content;
+            padding: 10px 0;
+            margin-bottom: 18px;
+            border-bottom: 1px solid rgb(207, 198, 219);
+        }
+
+        &_allEmails {
+               width: 100%;
+                height: 450px;
+                font-size: 1rem;
+                overflow: scroll;
+                overflow-x: hidden;
+                margin-bottom: 50px;
+            .user {
+                width: 98%;
+                @include spacebetween-content;
+                height: 35px;
+                border-bottom: 1px solid rgb(105, 73, 73);
+            }
+        }
+    }
+}
+
+
+
+.userInfo_header {
+            @include center-content-row-top;
+            margin: 50px auto;
+            max-width: 500px;
+            font-size: 1.6rem;
+            color:rgb(177, 164, 184);
+            padding: 10px 0;
+            margin-bottom: 20px;
+            height: 500px;
+            }
+
+.hide {
+    display: none;
+    height: 0;
+}

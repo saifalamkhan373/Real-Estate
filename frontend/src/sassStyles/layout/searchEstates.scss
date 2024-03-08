@@ -1,0 +1,82 @@
+@import '../abstracts/variables';
+@import '../abstracts/global';
+@import '../abstracts/mixins';
+
+
+.searchFields {
+    width: 96%;
+    @include center-content-row;
+    margin: 0px  20px 30px 20px;
+    box-shadow: 0px 2px 2px rgb(27, 0, 0);
+    @include respond5(contentBreak){
+            flex-direction: column;
+             box-shadow: none;
+        }
+}
+
+.searchOptions {
+    width: 300px;
+    height: 40px;
+    font-size: 1rem;
+    color: rgb(198, 184, 206);
+    letter-spacing: 1px;
+    font-weight: bold;
+    @include center-content;
+    border: 1px solid rgb(148, 0, 0);
+    border-right: 0;
+      @include respond5(contentBreak){
+           margin-bottom: 10px;
+           border-right: 1px solid rgb(148, 0, 0);
+           box-shadow: 0px 2px 2px rgb(27, 0, 0);
+        }
+}
+
+.selectop {
+    width: 250px;
+    height: 40px;
+    color: rgb(111, 94, 122);
+    background-color: transparent;
+    border-right: 0px;
+    outline: none;
+    padding-left: 10px;
+    color: rgb(153, 142, 168);
+    border-color: rgb(148, 0, 0);
+    @include respond5(contentBreak){
+           width: 300px;
+           margin-bottom: 10px;
+        border-right: 1px solid rgb(148, 0, 0);
+        box-shadow: 0px 2px 2px rgb(27, 0, 0);
+        }
+}
+
+.select {
+      border: 1px solid rgb(73, 62, 80);
+}
+
+.searchbtn {
+    width: 100px;
+    height: 40px;
+    background: transparent;
+    border: 0;
+    border: 1px solid rgb(148, 0, 0);
+    outline: none;
+     @include respond5(contentBreak){
+           width: 300px;
+           box-shadow: 0px 2px 2px rgb(27, 0, 0);
+        }
+}
+
+.resetIcon {
+    width: 18px;
+     padding-top: 5px;
+    transition: .5s ease-in-out;
+}
+
+.searchIcon {
+    padding-top: 5px;
+    width: 20px;
+}
+
+.turn {
+    transform: rotate(360deg);
+}

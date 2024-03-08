@@ -1,0 +1,158 @@
+@import '../abstracts/variables';
+@import '../abstracts/global';
+@import '../abstracts/mixins';
+
+@keyframes fadeIn {
+  from {
+ opacity: 0;
+  }
+to {
+ opacity: 1;
+  }
+}
+
+.soldprops {
+    position: relative;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 120px 0;
+    height: auto;
+    @include center-content-column;
+
+        &_header {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 50px;
+            color:rgb(112, 102, 96);
+            // padding: 0 0 40px 0;
+            font-size: 1.8rem;
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: 4px;
+            @include center-content-row;
+        }
+
+        &_grid {
+            max-width: 100%;
+            padding: 0 50px;
+            margin-bottom: 30px;
+            margin-left: 20px;
+            margin-right: 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            gap: 20px;
+            @include respond11(fiveteenhundred){
+                     grid-template-columns: repeat(2, 1fr);
+                     width: 90%;
+                    }
+            @include respond12(thousand){
+                     grid-template-columns: repeat(1, 1fr);
+                     max-width: 540px;
+                     min-width: 320px;
+                     padding: 20px 0;
+                    }
+
+          
+            &_imageBox {
+                animation: fadeIn .8s ease-in;
+                position: relative;
+                width: 100%;
+                height: auto;
+                margin-bottom: 10px;
+                box-shadow: 0px 2px 2px rgb(158, 158, 158);
+                // @include respond12(thousand){
+                //      width: 80%;
+                //     }
+                @include respond(hamburgermenu){
+                     width: 100%;
+                }
+                @include respond3(smallest){
+                    width: 100%;
+                }
+
+                .message {
+                    position: absolute;
+                    width: 100%;
+                    top: 0;
+                    bottom: 0;
+                    background-image: linear-gradient(to top, rgb(240, 240, 240),rgb(201, 201, 201));
+                    z-index: 999;
+                    font-family: Arial, Helvetica, sans-serif;
+                    border-bottom: 1px solid white;
+
+                    &_text {
+                          @include center-content-column;
+                          height: 100%;
+                          color:rgb(79, 69, 94);
+                          span {
+                              height: 25px;
+                          }
+                    }
+                }
+    
+                .image {
+                width: 100%;
+                height: auto;
+                -webkit-filter: grayscale(100%);
+                -moz-filter: grayscale(100%);
+                -ms-filter: grayscale(100%);
+                filter: grayscale(100%);
+                transition: .3s ease-in-out;
+
+                &:hover {
+                    -webkit-filter: none;
+                -moz-filter: none;
+                -ms-filter:none;
+                filter: none;
+                }
+
+                & img {
+                    width: 100%;
+                    height: auto;
+                }
+               }
+               
+                .footer {
+                position: absolute;
+                border-bottom: 1px solid white;
+                width: 100%;
+                height: 25%;
+                @include center-content-row;
+                justify-content: space-around;
+                bottom: 0;
+                right: 0;
+                font-size: 1rem;
+                font-family: Arial, Helvetica, sans-serif;
+                letter-spacing: 2px;
+                color: rgb(200, 191, 214);
+                font-size: .9rem;
+                 background-image: linear-gradient(to top, rgb(241, 241, 241),rgb(207, 207, 207));
+                .soldChateau {
+                    color: rgb(63, 54, 48);
+                }
+
+                .soldPrice {
+                    color: rgb(197, 0, 0);
+                    font-weight: bold;
+                }
+                }
+            }
+     }
+     .loadmoreBtn {
+         position: absolute;
+         background-color:transparent;
+         color: rgb(100, 90, 78);
+         border-style: none;
+         outLine: none;
+         border: 2px solid rgb(148, 143, 143);
+         bottom: 10px;
+         width: 200px;
+         height: 50px;
+         cursor: pointer;
+
+          @include respond3(smallest){
+                   bottom: 20px;
+                }
+     }
+}

@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Chopin';
+    src: url('../../fonts/ChopinScript.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Alex';
+    src: url('../../fonts/AlexBrush-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Digi';
+    src: url('../../fonts/Digizen.ttf') format('truetype');
+}
+
+//colors
+$elliecolor: rgb(55, 39, 75);
+$elliecolorlight: rgb(134, 120, 151);
+$dominantbackground: rgb(65, 0, 0);
+
+
+//font-family
+$elliefont: 'Chopin';
+$dreamfont: 'Alex';
+$digizen : 'Digi';
+
