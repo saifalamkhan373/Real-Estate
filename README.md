@@ -1,8 +1,8 @@
 <h1 align="center">Real Estate Agent Application</h1>
 
 <h2>MERN Stack Application</h2>
-Front-end : React - Redux Toolkit - SASS CSS Pre-Processor<br>
-Back-end&nbsp;  : Express - MongoDB - Node<br><br><br>
+Front-End : React - Redux Toolkit - SASS CSS Pre-Processor<br>
+Back-End&nbsp;  : Express - MongoDB - Node<br><br><br>
 
 <p align="center"><img src="https://user-images.githubusercontent.com/38325801/197115944-a988e8f5-f5a8-46fc-868f-28a4238aaf83.png"/></p><br>
 
